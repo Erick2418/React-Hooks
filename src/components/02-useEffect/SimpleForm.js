@@ -12,7 +12,7 @@ export const SimpleForm = () => {
 
     const {name,email}= formState;
 
-    useEffect(() => {/*CADA QUE CAMBIE SE VUELE A EJECUTAR, SI COLOCAS [] SOLO 1 VEZ */
+    useEffect(() => {
         //console.log('HEY!!!');
     },[])
 
