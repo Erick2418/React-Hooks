@@ -3,7 +3,7 @@ import { useFetch } from '../../hooks/useFetch';
 import './../02-useEffect/effects.css';
 export const MultipleCustomHooks = () => {
 
-    const state = useFetch(`https://www.breakingbadapi.com/api/quotes/1`);
+    const state = useFetch(`https://www.breakingbadapi.com/api/quotes/2`);
     console.log(state);
     return (
         <div>
