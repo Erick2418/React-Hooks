@@ -9,13 +9,6 @@ export const MultipleCustomHooks = () => {
     const {loading, data } = useFetch(`https://www.breakingbadapi.com/api/quotes/${counter}`);
    
     const {author,quote} = !!data && data[0];
-    /*
-    Algo Interesante de el !!DATA es que
-    data regresa null la primera vez
-    !data regresa true  (niega el null)
-    !!data regresa false (niega el null que esta en true y lo pasa a false)
-    pd: en este caso data[0] es lo que queremos
-    */ 
 
     return (
         <div>
