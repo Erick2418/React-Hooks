@@ -40,7 +40,20 @@ export const TodoApp = () => {
 
        localStorage.setItem('todos',JSON.stringify(todos));
     }, [todos]);
+   /*TAREA   CREEN EL DELETE  
+   LLAMAR LA FUNCION DEL DELETE DEL TODOREDUCER, REGRESA LOS TODO EXCEPTO EL QUE LE DIJE
+   *CREAR LA ACCION
+   *HACER EL DISPACH
    
+   */
+    const handleDelete=(todoId)=>{
+       console.log(todoId)
+        const action={
+            type: 'delete',
+            payload:todoId
+        }
+        dispatch(action);
+    }
 
     const handleSubmit=(e)=>{
         e.preventDefault();
@@ -80,12 +93,25 @@ export const TodoApp = () => {
                                 key={todo.id}
                                 className="list-group-item"
                             >
+                            
                             <p className="text-center">{i+1} . {todo.desc} </p>
-                                <button
+                            
+                            <button
                                 className="btn btn-danger"
-                                >
+                                onClick={
+                                    /*ESTO ES REEE IMPORTANTE
+                                    RECUERDA QUE SI QUIERES EL ID O USAR
+                                    UN ELEMENTO Q SE CREO EN EL .MAP
+                                    TIENES QUE MANDARLO POR FUNCION DE FLECHA
+                                    DE ESTA FORMA NO SE EJECUTA AL INICIO
+                                    SI NO CUANDO LO LLAMES */
+                                    
+                                    ()=>{
+                                    handleDelete(todo.id)
+                                } }
+                            >
                                     Borrar
-                                </button>
+                            </button>
 
                             </li>
                             ))
