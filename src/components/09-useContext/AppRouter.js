@@ -10,11 +10,6 @@ import { NavBar } from './NavBar';
 import { AboutScreen } from './AboutScreen';
 import { HomeScreen } from './HomeScreen';
 import { LoginScreen } from './LoginScreen';
-/*
-https://reactrouter.com/web/guides/quick-start
-Para usar los Routers tienes que instalar por nmp
-eso instala las herramientas que se usaran
-*/  
 export const AppRouter = () => {
     return (
         <Router>
